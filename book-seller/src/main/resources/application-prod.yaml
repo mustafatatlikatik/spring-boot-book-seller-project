@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERDB_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-circular-references: true
+
+app:
+  jwt:
+    secret: RandomSecretKey
+    expiration-in-ms: 86400000
+authentication:
+  internal-api-key: ${INTERNAL_API_KEY}
